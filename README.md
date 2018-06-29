@@ -1,14 +1,17 @@
 # Web-start
-Essential web files to start a new project:
-1. HTML5
-2. CSS3
-3. JAVASCRIPT
+## Essential web files to start a new project:
+1. **HTML5**
+2. **CSS3**
+3. **JAVASCRIPT**
 
 ### Adding index.html 
-- **METATAG** => _Kate Morris April 13th, 2017_
-they're at the top of every page in the header and are therefore the first thing seen; stick to the core minimum. Don't add meta tags you don't need — they just take up code space. The less code you have, the better. Think of your page code as a set of step-by-step directions to get somewhere, but for a browser.
+**METATAG** 
+> They're at the top of every page in the header and are therefore the first thing seen; stick to the core minimum. Don't add meta tags you don't need — they just take up code space. The less code you have, the better. Think of your page code as a set of step-by-step directions to get somewhere, but for a browser.
 
-These are the meta tags that should be on every page, no matter what:
+>_Kate Morris April 13th, 2017_
+
+These are the meta tags that should be on every page:
+
 - **Meta content type** – This tag is necessary to declare your character set for the page and should be present on every page.
 ```
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -45,7 +48,8 @@ var myHeading = document.querySelector('h1');
 myHeading.textContent = 'Hello world!';
 ```
 4. Finally, make sure the HTML and JavaScript files are saved, then load index.html in the browser.
-- (What's happened?)
+
+#### **(What's happened?)**
 Your heading text has now been changed to "Hello world!" using JavaScript. You did this by first using a function called querySelector() to grab a reference to your heading, and store it in a variable called myHeading. This is very similar to what we did using CSS selectors. When wanting to do something to an element, you first need to select it.
 
 After that, you set the value of the myHeading variable's textContent property (which represents the content of the heading) to "Hello world!".

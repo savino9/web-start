@@ -30,3 +30,22 @@ One of the pioneers of the CSS Reset method, _Eric Meyer_, created a Reset style
 
 ### Adding app.js
 - **JavaScript** ("JS" for short) is a full-fledged dynamic programming language that, when applied to an HTML document, can provide dynamic interactivity on websites. It was invented by _Brendan Eich_, co-founder of the Mozilla project, the Mozilla Foundation, and the Mozilla Corporation.
+
+#### Creating our first js file => 
+1. First, go to your test site and create a new folder named 'scripts' (without the quotes). Then, within the new scripts folder you just created, create a new file called app.js 
+Save it in your scripts folder.
+2. Next, in your index.html file enter the following element on a new line just before the closing </body> tag:
+```
+<script src="scripts/main.js"></script>
+```
+This is basically doing the same job as the <link> element for CSS — it applies the JavaScript to the page, so it can have an effect on the HTML (along with the CSS, and anything else on the page).
+3. Now add the following code to the main.js file:
+```
+var myHeading = document.querySelector('h1');
+myHeading.textContent = 'Hello world!';
+```
+4. Finally, make sure the HTML and JavaScript files are saved, then load index.html in the browser.
+- (What's happened?)
+Your heading text has now been changed to "Hello world!" using JavaScript. You did this by first using a function called querySelector() to grab a reference to your heading, and store it in a variable called myHeading. This is very similar to what we did using CSS selectors. When wanting to do something to an element, you first need to select it.
+
+After that, you set the value of the myHeading variable's textContent property (which represents the content of the heading) to "Hello world!".

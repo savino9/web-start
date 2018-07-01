@@ -60,6 +60,12 @@ In the npm website you can search all the packages that are located in the npm R
 
 The packege.json is a metafile that describes this package.
 
+- **live-server**
+https://www.npmjs.com/package/live-server
+
+- **Lodash**
+A modern JavaScript utility library delivering modularity, performance & extras
+
 ### GIT
 **Tips** 
 - How can I delete a file from git repo?

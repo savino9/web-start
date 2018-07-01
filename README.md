@@ -53,8 +53,28 @@ Your heading text has now been changed to "Hello world!" using JavaScript. You d
 
 After that, you set the value of the myHeading variable's textContent property (which represents the content of the heading) to "Hello world!".
 
+### NPM
 - NPM is package manager and it was created for developer to share js code that they have written.
 
 In the npm website you can search all the packages that are located in the npm Registry and this registry keeps track of files that have been subitted: they contains two things => js file and package.json file
 
 The packege.json is a metafile that describes this package.
+
+### GIT
+**Tips** 
+- How can I delete a file from git repo?
+1. Use ```git rm```
+```
+git rm file1.txt
+git commit -m "remove file1.txt"
+```
+But if you want to remove the file only from the Git repository and not remove it from the filesystem, use:
+```
+git rm --cached file1.txt
+git commit -m "remove file1.txt"
+```
+And to push changes to remote repo
+```
+git push origin branch_name  
+```
+

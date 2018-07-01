@@ -52,9 +52,3 @@ myHeading.textContent = 'Hello world!';
 Your heading text has now been changed to "Hello world!" using JavaScript. You did this by first using a function called querySelector() to grab a reference to your heading, and store it in a variable called myHeading. This is very similar to what we did using CSS selectors. When wanting to do something to an element, you first need to select it.
 
 After that, you set the value of the myHeading variable's textContent property (which represents the content of the heading) to "Hello world!".
-
-- NPM is package manager and it was created for developer to share js code that they have written.
-
-In the npm website you can search all the packages that are located in the npm Registry and this registry keeps track of files that have been subitted: they contains two things => js file and package.json file
-
-The packege.json is a metafile that describes this package.

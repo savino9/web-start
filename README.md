@@ -60,6 +60,8 @@ In the npm website you can search all the packages that are located in the npm R
 
 The packege.json is a metafile that describes this package.
 
+npm init -> create package.json file
+
 - **live-server**
 https://www.npmjs.com/package/live-server
 

@@ -89,4 +89,11 @@ git push origin branch_name
 ### REACT <3
 A JavaScript library for building user interfaces
 
+### REDUX 
+https://redux.js.org/
+
+### P5.js Library
+https://p5js.org/
+
+
 

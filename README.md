@@ -103,6 +103,9 @@ This command will map remote repository at <remote_repo_url> to a ref in your lo
 ```
 git push -u <remote_name> <local_branch_name>
 ```
+This command will push the local repo branch under <local_branc_name> to the remote repo at <remote_name>.
+
+
 
 ### REACT <3
 A JavaScript library for building user interfaces

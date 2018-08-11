@@ -85,6 +85,24 @@ And to push changes to remote repo
 ```
 git push origin branch_name  
 ```
+To create a new repo, you'll use the git init command. git init is a one-time command you use during the initial setup of a new repo. Executing this command will create a new .git subdirectory in your current working directory. This will also create a new master branch. 
+```
+git init
+```
+If a project has already been set up in a central repository, the clone command is the most common way for users to obtain a local development clone.
+```
+git clone <repo url>
+```
+
+### Configuration & set up: git config
+Once you have a remote repo setup, you will need to add a remote repo url to your local git config, and set an upstream branch for your local branches. The git remote command offers such utility.
+```
+git remote add <remote_name> <remote_repo_url>
+```
+This command will map remote repository at <remote_repo_url> to a ref in your local repo under <remote_name>. Once you have mapped the remote repo you can push local branches to it.
+```
+git push -u <remote_name> <local_branch_name>
+```
 
 ### REACT <3
 A JavaScript library for building user interfaces

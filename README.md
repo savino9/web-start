@@ -89,6 +89,14 @@ To create a new repo, you'll use the git init command. git init is a one-time co
 ```
 git init
 ```
+After the repository has been initialized, you need to add the origin
+```
+git remote add origin (link of your central repository on github)
+```
+We need to pull in order to have the latest version of the master branch
+```
+git pull origin master
+```
 If a project has already been set up in a central repository, the clone command is the most common way for users to obtain a local development clone.
 ```
 git clone <repo url>
@@ -116,6 +124,15 @@ Delete a branch
 1. Go back to the master 
 2. git branch -D (branch name)
 ```
+Merge the branch when you're happy with the result :)
+```
+1. Go back to the master 
+2. git merge (branch name)
+```
+#!Important How to fix merge conflict
+1. Centralized workflow
+Only one master branch everybody working on it
+
 
 ### Configuration & set up: git config
 Once you have a remote repo setup, you will need to add a remote repo url to your local git config, and set an upstream branch for your local branches. The git remote command offers such utility.

@@ -94,6 +94,29 @@ If a project has already been set up in a central repository, the clone command 
 git clone <repo url>
 ```
 
+### GIT BRANCHES
+Shows all the branches
+```
+git branch -a
+```
+Create new branch
+```
+git branch (branch name)
+```
+Create new branch (fast way)
+```
+git checkout -b (branch name)
+```
+Change branch
+```
+git checkout (branch name)
+```
+Delete a branch
+```
+1. Go back to the master 
+2. git branch -D (branch name)
+```
+
 ### Configuration & set up: git config
 Once you have a remote repo setup, you will need to add a remote repo url to your local git config, and set an upstream branch for your local branches. The git remote command offers such utility.
 ```

@@ -129,12 +129,43 @@ Merge the branch when you're happy with the result :)
 1. Go back to the master 
 2. git merge (branch name)
 ```
-#!Important How to fix merge conflict
-1. Centralized workflow
+**!Important How to fix merge conflict**
+1. **Centralized workflow**
 Only one master branch everybody working on it
+When you've got the error:
+__![rejected]   master -> master (fetch first)
+error: failed to push some refs to 'git@github.com:// .. ecc'
+Updates were rejected because the remote contains work that you do not have locally__
+**FIX**
+```
+git pull --rebase origin master
+```
+The command ***rebase*** always have the initial commit that came from the central 
+repository it will add my commit on top of that workflow 
 
+Then check with: git status to see where is the conflict file is
+
+- To fix the files you can use: 
+```
+git mergetool 
+```
+After you've decided how to fix the changes you can continue rebasing
+
+```
+git rebase --continue
+```
+Check if everything is ok -> git push -> git status
+
+2. **Feature Branch Workflow**
+Create pull request to discuss with the developers about the new feature 
 
 ### Configuration & set up: git config
+```
+git remote -v
+```
+You can add as many as you want remote you can call it with any name, it's very useful when you want to test out
+the features of a pull request on your computer without compromize the master 
+
 Once you have a remote repo setup, you will need to add a remote repo url to your local git config, and set an upstream branch for your local branches. The git remote command offers such utility.
 ```
 git remote add <remote_name> <remote_repo_url>
@@ -144,8 +175,6 @@ This command will map remote repository at <remote_repo_url> to a ref in your lo
 git push -u <remote_name> <local_branch_name>
 ```
 This command will push the local repo branch under <local_branc_name> to the remote repo at <remote_name>.
-
-
 
 ### REACT <3
 A JavaScript library for building user interfaces

@@ -195,6 +195,94 @@ https://redux.js.org/
 ### P5.js Library
 https://p5js.org/
 
+### JAVASCRIPT ES6 (ECMA SCRIPT VERSION 6)
+let - const -> new way to declare a variables
+use let when you want to create different scope everytime a let variable is in the {} it creates a new scope
+with const you can make sure a variable isn't going to change his value but if it's an object you can still change the 
+properties of the object
+
+**Destructuring**
+```
+const obj = {
+	player: 'bobby',
+	experience: 100,
+	wizardLevel: false,
+}
+// Classic old way 
+const player = obj.player;
+
+// Distructuring
+const { player, experience } = obj;
+let { wizardLevel } = obj;
+```
+**Object Properties**
+```
+const name = 'ciao'
+
+const obj = {
+	[name]: 'savino',
+	[2+1]: 'fa tre',
+}
+```
+If properties and values are the same you can write an object without values see the example 
+```
+const a = 'name';
+const b = true;
+const c = {};
+// Instead of 
+const obj = {
+	a: a,
+	b: b,
+	c: c
+}
+// We can write directly 
+const obj = {
+	a,
+	b,
+	c
+}
+```
+**Template strings**
+```
+const name = 'savino';
+const age = 28;
+const pet = 'dog';
+// old way
+const greeting = "Hello " + name + "you seem to be" + age;
+// template strings
+const greetingsbetter = `Hello ${name} you seem to be ${age-10}. What a lovely ${pet} you have!`;
+```
+**Default arguments**
+```
+function greet (name='',age=30,pet='cat'){
+	return `Hello ${name} you seem to be ${age-10}. What a lovely ${pet} you have!`;
+}
+```
+**Symbol**
+Compleately unique javascript type
+```
+let sym1 = Symbol();
+let sym2 = Symbol('foo');
+let sym3 = Symbol('foo');
+
+sym2 === sym3 //false
+```
+**Arrow function**
+```
+//old way
+function add(){
+	return a + b
+}
+// ES6 single return
+const add = ( a, b ) =>  a + b 
+// ES6 multiple instructions
+const add = ( a, b ) =>  {
+	let c = 0;
+	c = a + b;
+	return c
+}
+```
+
 ### NODE JS
 console.log(__dirname) -> full path
 

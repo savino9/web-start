@@ -3,6 +3,19 @@
 /* level 0.9 */
 // write a function that, given an array of both letters and numbers, returns a new array that contains only the letters from the first array.
 
+var arr = [1,"ciccio",50,6,"susan"];
+
+function newArr(arg) {
+	var arr2 = [];
+	for (var i = 0; i < arr.length; i++) {
+		if(typeof arr[i] === 'string'){
+			arr2.push(arr[i]);
+		}
+	}
+}
+newArr(arr);
+console.log(arr2);
+
 // Level 0.9
 // create a function that takes in two strings and prints out the first letter in each of them.
 

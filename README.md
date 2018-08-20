@@ -59,8 +59,18 @@ After that, you set the value of the myHeading variable's textContent property (
 In the npm website you can search all the packages that are located in the npm Registry and this registry keeps track of files that have been subitted: they contains two things => js file and package.json file
 
 The packege.json is a metafile that describes this package.
+```
+npm init -y
+```
 
 npm init -> create package.json file
+
+**Nice Modules**
+**Nodemon** allows you to see your changes without running node all the time
+```
+npm install nodemon --save-dev
+```
+install the nodemon modules in the devDependencies -> only used when we're developing 
 
 - **live-server**
 https://www.npmjs.com/package/live-server
@@ -185,5 +195,25 @@ https://redux.js.org/
 ### P5.js Library
 https://p5js.org/
 
+### NODE JS
+console.log(__dirname) -> full path
+
+- How to import files using the common js
+1. const (whatever you want export) = require('file path') 
+2. module.exports = { export: export }
+- How to use it?
+```
+const a = (whatever you want export).export;
+```
+
+Three kinds of modules that you can have in Node:
+- Custom modules (see up ^)
+- Build in modules -> 'fs' file system modules allows you to read text file ecc. 
+```
+const c = require('fs').readFile;
+console.log(c);
+```
+- Build in modules -> 'http' 
+- Build in modules -> 'nodemon' (See up ^ for the installation with npm)
 
 

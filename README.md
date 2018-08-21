@@ -282,6 +282,29 @@ const add = ( a, b ) =>  {
 	return c
 }
 ```
+**Closures**
+A function run the function execute it's never going to execute again 
+BUT is going to remember that there are references to those variables
+so the child scope always has access to the parent scope
+
+**Currying**
+Currying is the process of converting a function that takes multiple arg into a function that takes one at the time
+```
+const multiply = (a,b) => a * b;
+const curriedMultiply = (a) => (b) => a * b
+curriedMultiply(3)(4);
+
+//example if I want a function that multiply everything by 5 
+const multBy5 = curriedMultiply(5);
+multBy5(5) //25
+multBy5(10) //50
+```
+**Compose**
+```
+const compose = (f,g) => (a) => f(g(a));
+const sum = (num) => num + 1;
+compose(sum,sum)(5) // 7
+```
 
 ### NODE JS
 console.log(__dirname) -> full path

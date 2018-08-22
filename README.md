@@ -305,6 +305,8 @@ const compose = (f,g) => (a) => f(g(a));
 const sum = (num) => num + 1;
 compose(sum,sum)(5) // 7
 ```
+**Avoid side effects, functional purity**
+Whatever we put in the parameters 
 
 ### NODE JS
 console.log(__dirname) -> full path

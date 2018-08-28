@@ -309,6 +309,17 @@ compose(sum,sum)(5) // 7
 Whatever we put in the parameters 
 
 ### NODE JS
+Node it's a javascript runtime bulid on Chrome's V8 Javascript Engine 
+
+WHAT THE HELL IS A RUNTIME?
+Unlike C and other compiled languages, Javascript runs in a container - a program that reads your js codes and runs them. This program must do two things
+
+- parse your code and convert it to runnable commands //Engine
+- **provide some objects to javascript so that it can interact with the outside world.**
+The first part is called Engine and the second is **Runtime**
+
+For example, the Chrome Browser and node.js use the same Engine - V8, but their Runtimes are different: in Chrome you have the window, DOM objects etc, while node gives you require, Buffers and processes.
+
 console.log(__dirname) -> full path
 
 - How to import files using the common js
@@ -328,5 +339,19 @@ console.log(c);
 ```
 - Build in modules -> 'http' 
 - Build in modules -> 'nodemon' (See up ^ for the installation with npm)
+
+### VIM TIPS
+Hit the Esc key to enter "Normal mode". Then you can type : to enter "Command-line mode". A colon (:) will appear at the bottom of the screen and you can type in one of the following commands. To execute a command, press the Enter key.
+```
+:q to quit (short for :quit)
+:q! to quit without saving (short for :quit!)
+:wq to write and quit
+:wq! to write and quit even if file has only read permission (if file does not have write permission: force write)
+:x to write and quit (similar to :wq, but only write if there are changes)
+:exit to write and exit (same as :x)
+:qa to quit all (short for :quitall)
+:cq to quit without saving and make Vim return non-zero error (i.e. exit with error)
+You can also exit Vim directly from "Command mode" by typing ZZ to save and quit (same as :x) or ZQ to just quit (same as :q!). (Note that case is important here. ZZ and zz do not mean the same thing.)
+```
 
 

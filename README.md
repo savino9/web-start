@@ -166,6 +166,11 @@ git rebase --continue
 ```
 Check if everything is ok -> git push -> git status
 
+To change ONLY the last -m "message" commit 
+```
+git commit --amend -m "change the message here"
+```
+
 2. **Feature Branch Workflow**
 Create pull request to discuss with the developers about the new feature 
 
@@ -185,6 +190,17 @@ This command will map remote repository at <remote_repo_url> to a ref in your lo
 git push -u <remote_name> <local_branch_name>
 ```
 This command will push the local repo branch under <local_branc_name> to the remote repo at <remote_name>.
+
+**How can I test a pull request locally to my computer**
+```
+git remote add test-feature
+```
+We're gonna create a new remote called test-feature
+
+We can also check the github repository of the user copy and paste the
+username in the browser
+
+
 
 ### REACT <3
 A JavaScript library for building user interfaces

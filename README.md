@@ -385,8 +385,15 @@ List of common useful command:
 ```
 createdb namedb; //create new database
 \c namedb; // connect to the database 
-\d // show the list of relations
+create table tableName (id serial primary key, name text, email text, password text); // create new table with values in it
+insert into tableName (keys) values (val); // insert values into the table 
 \dt // show the list of tables
 \d tableName // describe table tableName
-
+select * from tableName; // Retrieves information from a table
+select * from tableName where name = 'savino'; // optionally given conditions 
+select count(*) from tableName; // return the number of values into the tableName
+delete from tableName where name = 'savino'; // delete data from table that meet given conditions
+alter table tableName add column price integer; // how to modify a table 
+alter table tableName drop column user_id; // modify and delete table 
+select * from tableName where user_id = (select (id) from users where email = 'savino'); // chaining queries
 ```

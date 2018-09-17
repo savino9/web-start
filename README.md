@@ -370,4 +370,23 @@ Hit the Esc key to enter "Normal mode". Then you can type : to enter "Command-li
 You can also exit Vim directly from "Command mode" by typing ZZ to save and quit (same as :x) or ZQ to just quit (same as :q!). (Note that case is important here. ZZ and zz do not mean the same thing.)
 ```
 
+### DATABASES 
+**What is a database?**
+- (Wikipedia) A database is an organized collection of data, stored and accessed electronically. Database designers typically organize the data to model aspects of reality in a way that supports processes requiring information, such as (for example) modeling the availability of rooms in hotels in a way that supports finding a hotel with vacancies.
 
+- (Techopedia) A database (DB), in the most general sense, is an organized collection of data. More specifically, a database is an electronic system that allows data to be easily accessed, manipulated and updated.
+
+**POSTGRES**
+PostgreSQL is a powerful, open source object-relational database system that uses and extends the SQL language combined with many features that safely store and scale the most complicated data workloads.
+
+When install postgres make sure you intall only the .app 
+
+List of common useful command:
+```
+createdb namedb; //create new database
+\c namedb; // connect to the database 
+\d // show the list of relations
+\dt // show the list of tables
+\d tableName // describe table tableName
+
+```

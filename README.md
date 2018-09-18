@@ -387,7 +387,8 @@ createdb namedb; //create new database
 \c namedb; // connect to the database 
 create table tableName (id serial primary key, name text, email text, password text); // create new table with values in it
 insert into tableName (keys) values (val); // insert values into the table 
-\dt // show the list of tables
+\l // show list of the databases
+\dt+ // show list of tables
 \d tableName // describe table tableName
 select * from tableName; // Retrieves information from a table
 select * from tableName where name = 'savino'; // optionally given conditions 
@@ -395,5 +396,10 @@ select count(*) from tableName; // return the number of values into the tableNam
 delete from tableName where name = 'savino'; // delete data from table that meet given conditions
 alter table tableName add column price integer; // how to modify a table 
 alter table tableName drop column user_id; // modify and delete table 
+update tableName set column1 = value1, column2 = value2 where condition; // update values 
 select * from tableName where user_id = (select (id) from users where email = 'savino'); // chaining queries
+select * from tableName order by id asc; // order elements in ascendant order or use desc for descendant order 
+user_id integer references tableName // how to assign foreign key 
 ```
+
+

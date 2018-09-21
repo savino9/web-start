@@ -401,5 +401,5 @@ select * from tableName where user_id = (select (id) from users where email = 's
 select * from tableName order by id asc; // order elements in ascendant order or use desc for descendant order 
 user_id integer references tableName // how to assign foreign key 
 ```
-
+we can always use **default now()** to print out the date automatically;
 

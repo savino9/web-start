@@ -33,7 +33,7 @@ One of the pioneers of the CSS Reset method, _Eric Meyer_, created a Reset style
 ### Adding app.js
 - **JavaScript** ("JS" for short) is a full-fledged dynamic programming language that, when applied to an HTML document, can provide dynamic interactivity on websites. It was invented by _Brendan Eich_, co-founder of the Mozilla project, the Mozilla Foundation, and the Mozilla Corporation.
 
-#### **Creating our first js file =>** 
+#### **Creating our first js file** 
 1. First, go to your test site and create a new folder named 'scripts' (without the quotes). Then, within the new scripts folder you just created, create a new file called app.js 
 Save it in your scripts folder.
 2. Next, in your index.html file enter the following element on a new line just before the closing </body> tag:
@@ -200,24 +200,22 @@ We're gonna create a new remote called test-feature
 We can also check the github repository of the user copy and paste the
 username in the browser
 
-
-
-### REACT <3
+## REACT <3
 A JavaScript library for building user interfaces
 
-### REDUX 
+## REDUX 
 https://redux.js.org/
 
 ### P5.js Library
 https://p5js.org/
 
-### JAVASCRIPT ES6 (ECMA SCRIPT VERSION 6)
+## JAVASCRIPT ES6 (ECMA SCRIPT VERSION 6)
 let - const -> new way to declare a variables
 use let when you want to create different scope everytime a let variable is in the {} it creates a new scope
 with const you can make sure a variable isn't going to change his value but if it's an object you can still change the 
 properties of the object
 
-**Destructuring**
+### **Destructuring**
 ```
 const obj = {
 	player: 'bobby',
@@ -231,7 +229,7 @@ const player = obj.player;
 const { player, experience } = obj;
 let { wizardLevel } = obj;
 ```
-**Object Properties**
+### **Object Properties**
 ```
 const name = 'ciao'
 
@@ -258,7 +256,7 @@ const obj = {
 	c
 }
 ```
-**Template strings**
+### **Template strings**
 ```
 const name = 'savino';
 const age = 28;
@@ -268,13 +266,13 @@ const greeting = "Hello " + name + "you seem to be" + age;
 // template strings
 const greetingsbetter = `Hello ${name} you seem to be ${age-10}. What a lovely ${pet} you have!`;
 ```
-**Default arguments**
+### **Default arguments**
 ```
 function greet (name='',age=30,pet='cat'){
 	return `Hello ${name} you seem to be ${age-10}. What a lovely ${pet} you have!`;
 }
 ```
-**Symbol**
+### **Symbol**
 Compleately unique javascript type
 ```
 let sym1 = Symbol();
@@ -283,7 +281,7 @@ let sym3 = Symbol('foo');
 
 sym2 === sym3 //false
 ```
-**Arrow function**
+### **Arrow function**
 ```
 //old way
 function add(){
@@ -298,12 +296,12 @@ const add = ( a, b ) =>  {
 	return c
 }
 ```
-**Closures**
+### **Closures**
 A function run the function execute it's never going to execute again 
 BUT is going to remember that there are references to those variables
 so the child scope always has access to the parent scope
 
-**Currying**
+### **Currying**
 Currying is the process of converting a function that takes multiple arg into a function that takes one at the time
 ```
 const multiply = (a,b) => a * b;
@@ -315,7 +313,7 @@ const multBy5 = curriedMultiply(5);
 multBy5(5) //25
 multBy5(10) //50
 ```
-**Compose**
+### **Compose**
 ```
 const compose = (f,g) => (a) => f(g(a));
 const sum = (num) => num + 1;
@@ -324,7 +322,7 @@ compose(sum,sum)(5) // 7
 **Avoid side effects, functional purity**
 Whatever we put in the parameters 
 
-### NODE JS
+## NODE JS
 Node it's a javascript runtime bulid on Chrome's V8 Javascript Engine 
 
 WHAT THE HELL IS A RUNTIME?
@@ -337,7 +335,6 @@ The first part is called Engine and the second is **Runtime**
 For example, the Chrome Browser and node.js use the same Engine - V8, but their Runtimes are different: in Chrome you have the window, DOM objects etc, while node gives you require, Buffers and processes.
 
 console.log(__dirname) -> full path
-
 - How to import files using the common js
 1. const (whatever you want export) = require('file path') 
 2. module.exports = { export: export }
@@ -356,7 +353,7 @@ console.log(c);
 - Build in modules -> 'http' 
 - Build in modules -> 'nodemon' (See up ^ for the installation with npm)
 
-### VIM TIPS
+## VIM TIPS
 Hit the Esc key to enter "Normal mode". Then you can type : to enter "Command-line mode". A colon (:) will appear at the bottom of the screen and you can type in one of the following commands. To execute a command, press the Enter key.
 ```
 :q to quit (short for :quit)
@@ -370,13 +367,13 @@ Hit the Esc key to enter "Normal mode". Then you can type : to enter "Command-li
 You can also exit Vim directly from "Command mode" by typing ZZ to save and quit (same as :x) or ZQ to just quit (same as :q!). (Note that case is important here. ZZ and zz do not mean the same thing.)
 ```
 
-### DATABASES 
-**What is a database?**
+## DATABASES 
+### **What is a database?**
 - (Wikipedia) A database is an organized collection of data, stored and accessed electronically. Database designers typically organize the data to model aspects of reality in a way that supports processes requiring information, such as (for example) modeling the availability of rooms in hotels in a way that supports finding a hotel with vacancies.
 
 - (Techopedia) A database (DB), in the most general sense, is an organized collection of data. More specifically, a database is an electronic system that allows data to be easily accessed, manipulated and updated.
 
-**POSTGRES**
+### **POSTGRES**
 PostgreSQL is a powerful, open source object-relational database system that uses and extends the SQL language combined with many features that safely store and scale the most complicated data workloads.
 
 When install postgres make sure you intall only the .app 
@@ -403,3 +400,36 @@ user_id integer references tableName // how to assign foreign key
 ```
 we can always use **default now()** to print out the date automatically;
 
+ORM -> (Object relational mapping) way to comunicate to the database kepping using the back-end language 
+
+### **SQL FUNCIONS**
+- Average
+```
+select avg(column) from tableName;
+```
+- Sum 
+```
+select sum(column) from tableName;
+```
+- Count (accumulator)
+```
+select count(column) from tableName;
+```
+
+### Join table
+In order to select the information that you need we can join table
+```
+select * from tableName join targetTableName on tableName.property = targetTableName.property
+```
+
+### Delete
+```
+delete from tableName where name='Sally';
+```
+
+## **SEQUELIZE**
+
+table that rapresenting something in the real world like table hats -> hats is the MODEL
+
+the sequelize.sync() -> create the tables 
+with the .then we're inserting values 

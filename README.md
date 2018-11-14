@@ -433,3 +433,42 @@ table that rapresenting something in the real world like table hats -> hats is t
 
 the sequelize.sync() -> create the tables 
 with the .then we're inserting values 
+
+## **SSH**
+ssh-keygen  command:
+```
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+pbcopy < ~/.ssh/id_rsa
+ssh-add ~/.ssh/id_rsa
+```
+Tip:
+```
+ssh-add -l //list of all the identities
+ssh-add -D //remove all the identities 
+```
+
+## **Performance**
+Improve: 
+front-end
+transfer of the file (network latency)
+back-end processing 
+
+1. Network transfer section
+Minimize the size of the files
+
+JS => https://www.uglifyjs.net/
+IMAGES => 
+- transparency: PNG
+- animations: GIF
+- colorful images: JPG
+- simple icons: SVG
+- Reduce PNG -> TinyPNG (works also for the JPG)
+- Reduce JPG -> jpeg-optimizer
+- Try to choose simple illustrations over highly detailed photographs
+- Always lower jpg image quality (30-60%)
+- Resize image based on size it will be displayed 
+- Display different size image for different backgrounds 
+- Use CDNs like imigix
+- Remove image metadata
+
+

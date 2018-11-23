@@ -471,4 +471,22 @@ IMAGES =>
 - Use CDNs like imigix
 - Remove image metadata
 
+To do list:
+- Minimize all text
+- Minimize images
+- Media Queries
+- Minimize number of file 
 
+Always load the style as soon as possible and putting the js file at the bottom (remember js is blocking the download of the other files es css);
+
+**HTML:**
+- Load style tag in the <head>
+- Load script right before </body>
+
+**CSS:**
+- Only load whatever is needed 
+- Above the fold loading 
+- Media attributes 
+- Less specificity
+
+CSS is render blocking 

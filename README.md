@@ -485,7 +485,30 @@ Always load the style as soon as possible and putting the js file at the bottom 
 
 **CSS:**
 - Only load whatever is needed 
-- Above the fold loading 
+- Above the fold loading (only load the content that the user is able to see) 
+
+Using a script we can load after the content above the fold is loaded:
+```
+<script type="text/javascript">
+	const loadStyleSheet = src => {
+		if(document.createStylesheet){
+			document.createStylesheet(src)
+		} else {
+			const stylesheet = document.createElement('link');
+			stylesheet.href = src;
+			stylesheet.type = 'text/css'
+			document.getElementsByTagName('head')[0].appenChild(stylesheet);
+		}
+	}
+
+	window.onload = function() {
+		console.log('window done!');
+		loadStyleSheet('./style2.css');
+	}
+</script>
+```
+Adding this piece of code into your html file you don't need to add the style with the link tag.
+
 - Media attributes 
 - Less specificity
 

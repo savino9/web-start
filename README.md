@@ -448,6 +448,10 @@ ssh-add -D //remove all the identities
 ```
 
 ## **Performance**
+### **Critical Render Path**
+
+DOM => CSSOM => RENDER TREE => LAYOUT => PAINT
+
 Improve: 
 front-end
 transfer of the file (network latency)
@@ -479,11 +483,11 @@ To do list:
 
 Always load the style as soon as possible and putting the js file at the bottom (remember js is blocking the download of the other files es css);
 
-**HTML:**
+###**HTML:**
 - Load style tag in the <head>
 - Load script right before </body>
 
-**CSS:**
+###**CSS:**
 - Only load whatever is needed 
 - Above the fold loading (only load the content that the user is able to see) 
 
@@ -511,6 +515,45 @@ Using a script we can load after the content above the fold is loaded:
 Adding this piece of code into your html file you don't need to add the style with the link tag.
 
 - Media attributes 
+
+We can also load specific style for specific media queries(screen size)
+```
+<link rel="stylesheet" type="text/css" href="./style2.css" media="only screen and (min-width:500px)">
+```
+
 - Less specificity
 
-CSS is render blocking 
+Example 
+```
+/* bad */
+.header .nav .item .link a.important {
+	color: red;
+}
+
+/* good */
+a.important {
+	color: red;	
+}
+```
+
+**Tips:**
+Remember: CSS is render blocking;
+We should in terms of performace write css inline (that means less request)
+
+###**JS**
+- Load scripts asynchronously
+```
+<script src="demo_async.js" async></script>
+```
+- Defer loading of scripts
+```
+<script defer src="script.js"></script>
+```
+![](./img/performance.png.jpg)
+
+- Minimize DOM manipulation
+- Avoid long running Javascript
+
+
+
+Javasript it's usually called **parser blocking**;

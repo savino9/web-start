@@ -296,12 +296,12 @@ const add = ( a, b ) =>  {
 	return c
 }
 ```
-###Closures
+### **Closures**
 A function run the function execute it's never going to execute again 
 BUT is going to remember that there are references to those variables
 so the child scope always has access to the parent scope
 
-###Currying
+### **Currying**
 Currying is the process of converting a function that takes multiple arg into a function that takes one at the time
 ```
 const multiply = (a,b) => a * b;
@@ -313,7 +313,7 @@ const multBy5 = curriedMultiply(5);
 multBy5(5) //25
 multBy5(10) //50
 ```
-###Compose
+### **Compose**
 ```
 const compose = (f,g) => (a) => f(g(a));
 const sum = (num) => num + 1;
@@ -322,7 +322,7 @@ compose(sum,sum)(5) // 7
 **Avoid side effects, functional purity**
 Whatever we put in the parameters 
 
-##NODE JS
+## NODE JS
 Node it's a javascript runtime bulid on Chrome's V8 Javascript Engine 
 
 WHAT THE HELL IS A RUNTIME?
@@ -353,7 +353,7 @@ console.log(c);
 - Build in modules -> 'http' 
 - Build in modules -> 'nodemon' (See up ^ for the installation with npm)
 
-##VIM TIPS
+## VIM TIPS
 Hit the Esc key to enter "Normal mode". Then you can type : to enter "Command-line mode". A colon (:) will appear at the bottom of the screen and you can type in one of the following commands. To execute a command, press the Enter key.
 ```
 :q to quit (short for :quit)
@@ -367,13 +367,13 @@ Hit the Esc key to enter "Normal mode". Then you can type : to enter "Command-li
 You can also exit Vim directly from "Command mode" by typing ZZ to save and quit (same as :x) or ZQ to just quit (same as :q!). (Note that case is important here. ZZ and zz do not mean the same thing.)
 ```
 
-##DATABASES 
-###What is a database?
+## DATABASES 
+### **What is a database?**
 - (Wikipedia) A database is an organized collection of data, stored and accessed electronically. Database designers typically organize the data to model aspects of reality in a way that supports processes requiring information, such as (for example) modeling the availability of rooms in hotels in a way that supports finding a hotel with vacancies.
 
 - (Techopedia) A database (DB), in the most general sense, is an organized collection of data. More specifically, a database is an electronic system that allows data to be easily accessed, manipulated and updated.
 
-###POSTGRES
+### **POSTGRES**
 PostgreSQL is a powerful, open source object-relational database system that uses and extends the SQL language combined with many features that safely store and scale the most complicated data workloads.
 
 When install postgres make sure you intall only the .app 
@@ -447,8 +447,8 @@ ssh-add -l //list of all the identities
 ssh-add -D //remove all the identities 
 ```
 
-##Performance
-###Critical Render Path
+## **Performance**
+### **Critical Render Path**
 
 DOM => CSSOM => RENDER TREE => LAYOUT => PAINT
 
@@ -461,6 +461,7 @@ back-end processing
 Minimize the size of the files
 
 JS => https://www.uglifyjs.net/
+
 IMAGES => 
 - transparency: PNG
 - animations: GIF
@@ -483,11 +484,11 @@ To do list:
 
 Always load the style as soon as possible and putting the js file at the bottom (remember js is blocking the download of the other files es css);
 
-###HTML:
+### **HTML:**
 - Load style tag in the <head>
 - Load script right before </body>
 
-###CSS:
+### **CSS:**
 - Only load whatever is needed 
 - Above the fold loading (only load the content that the user is able to see) 
 
@@ -540,7 +541,7 @@ a.important {
 Remember: CSS is render blocking;
 We should in terms of performace write css inline (that means less request)
 
-###JS
+### **JS**
 - Load scripts asynchronously
 ```
 <script src="demo_async.js" async></script>
@@ -553,7 +554,5 @@ We should in terms of performace write css inline (that means less request)
 
 - Minimize DOM manipulation
 - Avoid long running Javascript
-
-
 
 Javasript it's usually called **parser blocking**;

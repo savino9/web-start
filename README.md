@@ -496,7 +496,8 @@ Using a script we can load after the content above the fold is loaded:
 		} else {
 			const stylesheet = document.createElement('link');
 			stylesheet.href = src;
-			stylesheet.type = 'text/css'
+			stylesheet.type = 'text/css';
+			stylesheet.rel = 'stylesheet';
 			document.getElementsByTagName('head')[0].appenChild(stylesheet);
 		}
 	}

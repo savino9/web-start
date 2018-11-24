@@ -492,7 +492,7 @@ Always load the style as soon as possible and putting the js file at the bottom 
 - Only load whatever is needed 
 - Above the fold loading (only load the content that the user is able to see) 
 
-Using a script we can load after the content above the fold is loaded:
+Using a script we can load after the content above the fold is DOM content loaded:
 ```
 <script type="text/javascript">
 	const loadStyleSheet = src => {
@@ -550,9 +550,16 @@ We should in terms of performace write css inline (that means less request)
 ```
 <script defer src="script.js"></script>
 ```
-![](./img/performance.png.jpg)
+![](./img/performance.png)
+
+IF the core functionality requires js => use async 
+IF the core functionality doesn't require js => js should be deferred outside of the critical render path  
 
 - Minimize DOM manipulation
 - Avoid long running Javascript
 
 Javasript it's usually called **parser blocking**;
+
+**Performance Resources**
+- https://developers.google.com/speed/pagespeed/insights/
+

@@ -1,10 +1,12 @@
 # Web-start
-## Essential web files to start a new project:
+## List of essential files to start a new project
+### Techology needed:
 1. **HTML5**
 2. **CSS3**
 3. **JAVASCRIPT**
 
-### Adding index.html 
+### 1 of the first thing you want to do is **adding index.html** 
+
 **METATAG** 
 > They're at the top of every page in the header and are therefore the first thing seen; stick to the core minimum. Don't add meta tags you don't need — they just take up code space. The less code you have, the better. Think of your page code as a set of step-by-step directions to get somewhere, but for a browser.
 >_Kate Morris April 13th, 2017_
@@ -65,6 +67,12 @@ myHeading.textContent = 'Hello world!';
 Your heading text has now been changed to "Hello world!" using JavaScript. You did this by first using a function called querySelector() to grab a reference to your heading, and store it in a variable called myHeading. This is very similar to what we did using CSS selectors. When wanting to do something to an element, you first need to select it.
 
 After that, you set the value of the myHeading variable's textContent property (which represents the content of the heading) to "Hello world!".
+
+**Extra**
+JavaScript-Equality-Table
+https://dorey.github.io/JavaScript-Equality-Table/
+
+
 
 ### NPM
 - NPM is package manager and it was created for developer to share js code that they have written.

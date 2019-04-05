@@ -26,9 +26,22 @@ These are the meta tags that should be on every page:
 <meta name=viewport content="width=device-width, initial-scale=1">
 ```
 
+**Extra**
+Internet backbone: https://www.submarinecablemap.com/
+Maps that explain the Internet: https://www.vox.com/a/internet-maps
+First webpage in the world: http://info.cern.ch/hypertext/WWW/TheProject.html
+More About the History of the Web: 
+- Computer Networks: https://www.youtube.com/watch?reload=9&v=3QhU9jd03a0&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&index=29
+- Internet: https://www.youtube.com/watch?v=AEaKrq3SpW8&index=30&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo
+- World Wide Web: https://www.youtube.com/watch?v=guvsH5OFizE&index=31&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo
+HTML exercize: https://www.w3schools.com/css/exercise.asp
+
 ### Adding style.css 
 - **RESET CSS**
 One of the pioneers of the CSS Reset method, _Eric Meyer_, created a Reset stylesheet that is still in use on millions of websites today.
+**Extra**
+CSS SELECTOR exercize: https://flukeout.github.io
+CSS QUIZ: https://www.w3schools.com/css/css_quiz.asp
 
 ### Adding app.js
 - **JavaScript** ("JS" for short) is a full-fledged dynamic programming language that, when applied to an HTML document, can provide dynamic interactivity on websites. It was invented by _Brendan Eich_, co-founder of the Mozilla project, the Mozilla Foundation, and the Mozilla Corporation.
@@ -172,7 +185,34 @@ git commit --amend -m "change the message here"
 ```
 
 2. **Feature Branch Workflow**
-Create pull request to discuss with the developers about the new feature 
+Create pull request to discuss with the developers about the new feature
+
+## Git reset 
+Reset current HEAD to the specified state;
+git reset is a powerful command that is used to undo local changes to the state of a Git repo. Git reset operates on "The Three Trees of Git". These trees are the Commit History ( HEAD ), the Staging Index, and the Working Directory. 
+
+```
+--soft
+Does not touch the index file or the working tree at all (but resets the head to <commit>, just like all modes do). This leaves all your changed files "Changes to be committed", as git status would put it.
+
+--mixed
+Resets the index but not the working tree (i.e., the changed files are preserved but not marked for commit) and reports what has not been updated. This is the default action.
+
+If -N is specified, removed paths are marked as intent-to-add (see git-add[1]).
+
+--hard
+Resets the index and working tree. Any changes to tracked files in the working tree since <commit> are discarded.
+
+--merge
+Resets the index and updates the files in the working tree that are different between <commit> and HEAD, but keeps those which are different between the index and working tree (i.e. which have changes which have not been added). If a file that is different between <commit> and the index has unstaged changes, reset is aborted.
+
+In other words, --merge does something like a git read-tree -u -m <commit>, but carries forward unmerged index entries.
+
+--keep
+Resets index entries and updates files in the working tree that are different between <commit> and HEAD. If a file that is different between <commit> and HEAD has local changes, reset is aborted.
+
+If you want to undo a commit other than the latest on a branch, git-revert[1] is your friend.
+```
 
 ### Configuration & set up: git config
 ```
